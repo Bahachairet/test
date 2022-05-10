@@ -1,0 +1,52 @@
+<div class="container">
+
+
+
+  <div class="card mb-3" style="max-width: 1400px;"*ngIf="categorie">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="categorie.imgurl" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{categorie.idcateg}} </h5>
+          <p class="card-text">{{categorie.desciption}}</p>
+         
+         
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row row-cols-1 row-cols-md-3">
+
+    <div class="col mb-4" style="width: 18rem;" *ngFor="let freelancer of filtredfreelancer">
+      <img [src]="freelancer.imageurl" class="card-img-top" [alt]="freelancer.firstname" style="object-fit: cover; width: 275px;   height: 200px;">
+      <div class="card-body">
+        <h5 class="card-title">{{freelancer.firstname | titlecase}} {{freelancer.lastname | titlecase}}</h5>
+        <p class="card-text">{{freelancer.detail}}</p>
+        <p class="card-textt">{{freelancer.about}}</p>
+        <p class="card-text">{{freelancer.avgprice | currency :'TND' : 'symbol' :'1.2-2' :'TN'  }}</p>
+        
+
+        <a [routerLink]="['/freelancers',freelancer.id]" class="btn btn-primary">see more</a>
+       
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+      <div class="card-fotter">
+          <button class="btn btn-outline-info d-flex" (click)="backtolist()">
+              <span class="material-icons"> keyboard_arrow_left</span>
+              Retour
+          </button>
+      </div>
+    </div>

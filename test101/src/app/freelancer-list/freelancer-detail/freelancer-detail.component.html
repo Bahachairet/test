@@ -1,0 +1,29 @@
+<div class="container">
+
+
+<div class="card mb-3" style="max-width: 1400px;"*ngIf="freelancer">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="freelancer.imageurl" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{freelancer.firstname}} {{freelancer.lastname}} </h5>
+          <p class="card-text">{{freelancer.detail}}</p>
+          <p class="card-text">{{freelancer.about}}</p>
+          <p class="card-text"><small class="text-muted">{{freelancer.avgprice | currency :'TND' : 'symbol' :'1.2-2' :'TN' }}</small></p>
+        </div>
+        <div>
+            <app-star-rating [rating]="freelancer.stars"
+            (starRatingClicked)="receiveRatingClicked($event)"></app-star-rating>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-fotter">
+      <button class="btn btn-outline-info d-flex" (click)="backtolist()">
+          <span class="material-icons"> keyboard_arrow_left</span>
+          Retour
+      </button>
+  </div>
+</div>

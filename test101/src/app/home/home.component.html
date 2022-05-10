@@ -1,0 +1,52 @@
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card" style="width: 620px ; height: 580px;">
+      <div class="card-body">
+        <h1 class="card-title">How work</h1>
+         <h1 class="card-title">should work</h1>
+         <br><br>
+         <p class="card-text">Forget the old rules. You can have the best people. <br>
+          Right now. Right here.</p>
+          <br><br>
+       
+          <button type="button"  class="btn rounded-pill" style=" background-color: #296049 !important; color: aliceblue;">Find Work</button>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <button type="button"  class="btn rounded-pill" style="  background-color: aliceblue!important;  color:#296049 ;" [routerLink]="['/freelancers']">Find Freelancer</button>
+           
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card" style="margin: 0%; ">
+      <img  src="\assets\images\freelance.gif"   style="   object-fit: cover; width: 620px;   height: 580px;" > 
+    
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br>
+<br><br><br><br>
+
+<div class="container" id="ze"  style="margin-left: 40%;">
+  <h1 id="aze1" class="fs-1">Navigate</h1>
+  <h1 id="aze2" class="fs-1">categories</h1>
+
+</div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col mb-3" style="width: 25rem;" *ngFor="let categorie of categories">
+      <img [src]="categorie.imgurl" class="card-img-top" [alt]="" style="  object-fit: cover; width: 400px;   height: 400px;">
+      <div class="card-body">
+        <h5 class="card-title">{{categorie.idcateg | titlecase}} </h5>
+        <p class="card-text-1">{{categorie.desciption}}</p>
+       
+        
+        
+
+        <a [routerLink]="['/categories',categorie.idcateg]" class="btn btn-primary">see more</a>
+       
+      </div>
+    </div>
+
+</div>
+
+

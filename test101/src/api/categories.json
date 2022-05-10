@@ -1,0 +1,38 @@
+[
+    {
+        "idcateg":"web design",
+        "desciption":"Dev and IT experts to scale your org Hire independent professionals to shorten development cycles, bury backlogs, and drive product growth",
+        "imgurl":"assets/images/g1.jpg"
+       
+    },
+    {
+        "idcateg":"Design & Creative",
+        "desciption":"Hire freelance design and creative experts to help you scale Thousands of pros ready to kick-start your creative overhaul from day one.",
+        "imgurl":"assets/images/g2.jpg"
+       
+    },
+    {
+        "idcateg":"Sales & Marketing",
+        "desciption":"Scale when you need to with marketing and sales experts Build some buzz around your business with professionals from the world’s work marketplace.",
+        "imgurl":"assets/images/g3.jpg"
+       
+    },
+    {
+        "idcateg":"Writing & Translation ",
+        "desciption":"Hire freelance writing and translation experts in moments Thousands of pros are ready to finesse your language and help you go global.",
+        "imgurl":"assets/images/g4.jpg"
+       
+    },
+    {
+        "idcateg":"Finance & Accounting",
+        "desciption":"Find the talent you need for tax season Independent accounting experts, tax professionals, bookkeeping specialists and more are available on the world’s work marketplace to simplify your complex tax needs.",
+        "imgurl":"assets/images/g5.jpg"
+       
+    },
+    {
+        "idcateg":"Engineering & Architecture",
+        "desciption":"Scale up fast with engineering and architecture experts Hundreds of independent professionals who’ll design everything from floor plans to landscapes to interiors.",
+        "imgurl":"assets/images/g6.jpg"
+       
+    }
+]

@@ -1,0 +1,47 @@
+<div class="container">
+    <h2> {{title}}</h2>
+    <button class="btn btn-primary d-flex" (click)="toggleisnewbadge()">
+      <span class="material-icons">
+        {{showbadge ? 'visibility_off' :'visibility' }}
+      </span>
+      <span class="ml-2">
+     {{showbadge ? 'Cacher' : 'Afficher'}} Nouveau
+    </span>
+    </button>
+    <div class="my-2">
+      <div class="row">
+        <div class="col-md-4">
+          <span> Filtre Actuel :</span>
+          <b>{{freelancerfilter}}</b>
+
+        </div>
+        <div class="col-md-8 form-group">
+          <input type="text" class="form-control" [(ngModel)] ="freelancerfilter" >
+
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-primary" *ngIf="!!receiveRating">
+      {{receiveRating}}
+    </div>
+    <div class="row row-cols-1 row-cols-md-3">
+    <div class="col mb-4" style="width: 18rem;" *ngFor="let freelancer of filtredfreelancer">
+        <img [src]="freelancer.imageurl" class="card-img-top" [alt]="freelancer.firstname" style="object-fit: cover; width: 275px;   height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">{{freelancer.firstname | titlecase}} {{freelancer.lastname | titlecase}}</h5>
+          <p class="card-text">{{freelancer.detail}}</p>
+          <p class="card-textt">{{freelancer.about}}</p>
+          <p class="card-text">{{freelancer.avgprice | currency :'TND' : 'symbol' :'1.2-2' :'TN'  }}</p>
+          <div> 
+            <app-star-rating [rating]="freelancer.stars"
+            (starRatingClicked)="receiveRatingClicked($event)"></app-star-rating>
+          </div>
+
+          <a [routerLink]="['/freelancers',freelancer.id]" class="btn btn-primary">see more</a>
+          <div>
+          <span class="badge rounded-pill bg-success" *ngIf="showbadge"> Nouveau</span>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
